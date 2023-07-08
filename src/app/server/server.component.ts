@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
+  word:String = 'vader';
 
+  allow = true;
+  onCLickEvent(event: Event) {
+    this.word= (<HTMLInputElement>event.target).value;
+  }
 }
