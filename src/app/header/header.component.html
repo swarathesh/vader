@@ -4,10 +4,10 @@
   </div>
   <div class='sm:flex hidden'>
       <div class='flex  gap-3 md:gap-5'>
-        <button  class='black_btn'>
+        <button  (click)="onSelect('recipe')" class='black_btn'>
           Recipes
         </button>
-        <button type='button' class='outline_btn'>
+        <button (click)="onSelect('shopping')" type='button'  class='outline_btn'>
           Shopping List
         </button>
       </div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name:String = 'vader';
+  choice:String = 'recipe';
+
+  onSelect(feature: string) {
+    this.choice = feature;
+  }
+
 }

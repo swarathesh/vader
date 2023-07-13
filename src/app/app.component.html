@@ -1,4 +1,4 @@
-<app-header></app-header>
-<app-recipes></app-recipes>
-<app-shopping></app-shopping>
+<app-header (featureSelected)="onSelect($event)"></app-header>
+<app-recipes *ngIf="choice === 'recipe'"></app-recipes>
+<app-shopping *ngIf="choice === 'shopping'"></app-shopping>
 
