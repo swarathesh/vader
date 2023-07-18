@@ -15,4 +15,8 @@ export class ShoppingComponent {
     new Ingredient('Onions',20)
   ];
 
+  ingredientAdded(ingredient:Ingredient) {
+    this.ingredients.push(ingredient);
+  }
+
 }

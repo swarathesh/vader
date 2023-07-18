@@ -10,34 +10,9 @@
         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">Recipes</h5>
    </div>
 
-   <div class="flow-root"
-    *ngFor="let recipe of recipes">
-        <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
-            <li class="py-3 sm:py-4">
-                <div class="flex items-center space-x-4">
-                    <div class="flex">
-                        <img class="w-20 h-20 " src={{recipe.imagePath}} alt={{recipe.name}}>
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                            {{recipe.name}}
-                        </p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                            {{recipe.description}}
-                        </p>
-                    </div>
-                </div>
-            </li>
-            <hr/>
-        </ul>
-   </div>
-  </div>
-
+  <app-recipes-item
+  *ngFor="let recipeEl of recipes"
+  [recipe]="recipeEl"
+  (recipeSelected)="onRecipeSelected(recipeEl)"
+  ></app-recipes-item>
 </div>
-
-
-
-
-
-
-<app-recipes-item></app-recipes-item>
