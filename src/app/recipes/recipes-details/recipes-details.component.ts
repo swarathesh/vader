@@ -7,6 +7,12 @@ import { Recipe } from 'src/app/model/recipe.model';
   styleUrls: ['./recipes-details.component.css']
 })
 export class RecipesDetailsComponent {
+  isOpen = true;
 
   @Input() recipe: Recipe;
+
+
+  isOpened() {
+    this.isOpen = !this.isOpen;
+  }
 }
