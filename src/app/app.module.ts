@@ -12,6 +12,7 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingEditComponent } from './shopping/shopping-edit/shopping-edit.component';
 import { RecipesItemComponent } from './recipes/recipes-item/recipes-item.component';
 import { DropdownDirective } from './directive/dropdown.directive';
+import { ShoppingService } from './services/shopping.service';
 
 
 
@@ -33,7 +34,7 @@ import { DropdownDirective } from './directive/dropdown.directive';
     FormsModule // <-- import the FormsModule before binding with [(ngModel)]
 
   ],
-  providers: [],
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

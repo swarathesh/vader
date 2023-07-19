@@ -1,9 +1,9 @@
 <div class="flex ">
   <div class="sm:flex-row flex items-center">
-    <div class="flex m-5 ">
-      <app-recipes-list (recipeWasSelected)="getRecipe($event)"></app-recipes-list>
+    <div class="flex ">
+      <app-recipes-list></app-recipes-list>
     </div>
-    <div class="flex m-5 ">
+    <div class="flex ">
       <app-recipes-details
         *ngIf="selectedRecipe;else noRecipeSelected"
         [recipe]="selectedRecipe"
